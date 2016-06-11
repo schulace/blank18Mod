@@ -1,11 +1,13 @@
 package com.you.modname;
 
 
-import com.you.modname.init.Blocks;
-import com.you.modname.init.Items;
+import com.you.modname.init.myBlocks;
+import com.you.modname.init.myItems;
 import com.you.modname.proxy.CommonProxy;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -21,13 +23,14 @@ public class MainClass
 	public static MainClass instance;
 	@SidedProxy(clientSide="com.you.modname.proxy.ClientProxy", serverSide="com.you.modname.proxy.ServerProxy")
 	public static CommonProxy proxy;
+	public static ToolMaterial toolMat = EnumHelper.addToolMaterial("newMat", 3, 100, 2, 1, 5);
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent event)
 	{
-		Blocks.initBlocks();
-		Blocks.registerBlocks();
-		Items.initItems();
-		Items.registerItems();
+		myBlocks.initBlocks();
+		myBlocks.registerBlocks();
+		myItems.initItems();
+		myItems.registerItems();
 	}
 	@EventHandler
 	public void Init (FMLInitializationEvent event)
