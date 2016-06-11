@@ -1,5 +1,5 @@
 {
-    "parent": "landminemod:block/potion_block",
+    "parent": "modname:block/blockName",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

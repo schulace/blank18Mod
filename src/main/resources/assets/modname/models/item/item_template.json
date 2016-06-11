@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "landminemod:items/glass_dust"
+        "layer0": "modname:items/itemName"
     },
     "display": {
         "thirdperson": {
